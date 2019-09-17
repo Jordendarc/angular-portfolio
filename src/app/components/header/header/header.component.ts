@@ -23,14 +23,10 @@ import {
 
       // fade in when created. this could also be written as transition('void => *')
       transition(':enter', [
-        style({opacity: 0}),
-        animate(1000 )
-      ]),
-
-      // fade out when destroyed. this could also be written as transition('void => *')
-      transition(':leave',
-        animate(1000, style({opacity: 0})))
-    ])
+        style({opacity: 0,transform: 'translateY(-100%)'}),
+        animate('1300ms ease-in')
+      ])
+    ]),
   ]
 })
 export class HeaderComponent implements OnInit {
