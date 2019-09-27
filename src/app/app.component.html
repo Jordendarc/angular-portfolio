@@ -3,11 +3,11 @@
   <app-header></app-header>
   <br><br>
   <div class="button-list" >
-    <div class="link-button">
-      <a routerLink="/aboutMe">About Me</a>
+    <div (mouseenter)="enterHover($event)" (mouseleave)="exitHover($event)" routerLink="/aboutMe" class="link-button" id="about-me-button">
+      About Me
     </div>
-    <div class="link-button">
-      <a routerLink="/work">Work</a>
+    <div (mouseenter)="enterHover($event)" (mouseleave)="exitHover($event)" routerLink="/work" class="link-button" id="work-button">
+      Work
     </div>
   </div>
   <!-- <app-about-me></app-about-me> -->

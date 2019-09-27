@@ -9,4 +9,13 @@ import { BrowserModule } from '@angular/platform-browser';
 })
 export class AppComponent {
   title = 'portfolio';
+
+    enterHover(event){
+      console.log(event);
+   }
+
+   exitHover(event){
+     console.log(event);
+   }
+
 }
