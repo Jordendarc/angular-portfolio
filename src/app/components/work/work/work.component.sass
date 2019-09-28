@@ -1,5 +1,7 @@
 @import "../../../variables.sass"
 
+
+
 tr
   font-family: 'Hind Madurai', sans-serif
   color: $nice-red-color
@@ -18,10 +20,11 @@ tr
   box-shadow: 2px 2px 2px 2px $shadow-color
 
 td
-  font-size: 20px
   padding: 10px
-  // border-width: medium
-  // border-style: solid
+  @media screen and (max-width: $break-small)
+    font-size: 10px
+  @media screen and (min-width: $break-large)
+    font-size: 20px
 
 .location
   text-align: right
@@ -32,16 +35,22 @@ td
   width: 10%
 
 .company
-  font-size: 30px
   width: 30%
+  @media screen and (max-width: $break-small)
+    font-size: 15px
+  @media screen and (min-width: $break-large)
+    font-size: 30px
 
 .description
-  column-span: all
   font-size: 10px
   text-align: left
   width: 100%
   column-span: 4
 
 .main-work
-  margin-left: 20%
-  margin-right: 20%
+  @media screen and (max-width: $break-small)
+    margin-left: 0%
+    margin-right: 0%
+  @media screen and (min-width: $break-large)
+    margin-left: 20%
+    margin-right: 20%
