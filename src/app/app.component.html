@@ -2,13 +2,22 @@
 <div style="text-align:center">
   <app-header></app-header>
   <br><br>
-  <div class="button-list" >
+  <!-- <div class="button-list" >
     <div (mouseenter)="enterHover($event)" (mouseleave)="exitHover($event)" routerLink="/aboutMe" class="link-button" id="about-me-button">
       About Me
     </div>
     <div (mouseenter)="enterHover($event)" (mouseleave)="exitHover($event)" routerLink="/work" class="link-button" id="work-button">
       Work
     </div>
-  </div>
+  </div> -->
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span></span>
+    <a mat-button [routerLink]="'/aboutMe'"> About Me </a>
+    <a mat-button [routerLink]="'/work'"> Work </a>
+    <a mat-button [routerLink]="'/contact'"> Contact </a>
+  </mat-toolbar-row>
+</mat-toolbar>
+<br>
   <!-- <app-about-me></app-about-me> -->
 <router-outlet></router-outlet>

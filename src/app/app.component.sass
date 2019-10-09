@@ -3,24 +3,36 @@
 app-header
   height: 30%
 
-.link-button
-    border-style: solid
-    border-color: $nice-teal-color
-    border-width: 1px
+a
     width: 100px
     border-radius: 20px
     font-family: 'Hind Madurai', sans-serif
-    color: $nice-teal-color
+    color: $white-green
     text-decoration: none
     outline: none
+    margin: 10px
+    text-align: center
+    padding: 5px 5px 5px 5px
 
-div .link-button
-  margin: 0 auto
-  background-color: #2f3845
-  color: $white-green
-  box-shadow: 3px 3px 3px $shadow-color
+a:hover
+  animation-name: animate
+  animation-duration: 1s
+  background-color: $nice-teal-color
+  transform: scale(1.1,1.1)
 
-.button-list
+
+mat-toolbar
+  display: flex
+  justify-content: center
+  background-color: #2b3540
+
+// div .link-button
+//   margin: 0 auto
+//   background-color: #2f3845
+//   color: $white-green
+//   box-shadow: 3px 3px 3px $shadow-color
+
+mat-toolbar-row
   display: flex
   justify-content: center
 

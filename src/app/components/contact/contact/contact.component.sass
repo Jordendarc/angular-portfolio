@@ -1,0 +1,24 @@
+@import "../../../variables.sass"
+
+.contact-form
+  display: flex
+  flex-direction: column
+  margin-left: 20%
+  margin-right: 20%
+  background-color: white
+  padding: 5%
+  border-radius: 10px 10px 10px 10px
+  color: $nice-teal-color
+  @media screen and (max-width: $break-small)
+    display: block
+    margin-left: 0%
+    margin-right: 0%
+  @media screen and (min-width: $break-large)
+    margin-left: 20%
+    margin-right: 20%
+
+.mat-form-field-label
+  color: $nice-teal-color
+
+.mat-form-field-underline
+  background-color: green !important

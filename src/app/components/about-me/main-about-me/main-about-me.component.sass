@@ -1,0 +1,41 @@
+@import "../../../variables.sass"
+
+img
+  height: 60%
+  width: 60%
+  border-radius: 25px 25px 25px 25px
+  margin-top: 5%
+  margin-bottom: 5%
+  margin-right: 3%
+
+p
+  padding-top: 10%
+  padding-bottom: 10%
+  padding-left: 10%
+  padding-right: 10%
+
+#top
+  // display: flex
+  justify-content: space-between
+  padding: 5px 5px 5px 5px
+  margin-bottom: 10px
+  background-color: white
+  color: $nice-teal-color
+  font-family: 'Hind Madurai', sans-serif
+  border-radius: 10px 10px 10px 10px
+  @media screen and (max-width: $break-small)
+    display: block
+    margin-left: 0%
+    margin-right: 0%
+  @media screen and (min-width: $break-large)
+    display: flex
+    margin-left: 20%
+    margin-right: 20%
+
+#intro
+  display: block
+
+mat-divider
+    border-color: $nice-teal-color
+    margin-left: 20%
+    margin-right: 20%

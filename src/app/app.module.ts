@@ -11,6 +11,12 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material';
+import { MainAboutMeComponent } from './components/about-me/main-about-me/main-about-me.component';
+import { ContactComponent } from './components/contact/contact/contact.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
 
 
 
@@ -19,7 +25,9 @@ import { MatDividerModule } from '@angular/material';
     AppComponent,
     HeaderComponent,
     AboutMeComponent,
-    WorkComponent
+    WorkComponent,
+    MainAboutMeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +37,10 @@ import { MatDividerModule } from '@angular/material';
     MatSliderModule,
     MatExpansionModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatToolbarModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
