@@ -1,24 +1,31 @@
-<form class="contact-form">
+
+<form id="contact-form" (ngSubmit)="submitContactForm()"  #sendForm="ngForm">
+  {{ diagnostic }}
   <mat-form-field>
-    <input matInput placeholder="Your Name" required>
+    <input matInput placeholder="Your Name" [(ngModel)]="model.name" name="name" id="name" required #spy>
+    <!-- <div [hidden]="name.valid || name.pristine"
+       class="alert alert-danger">Name is required
+    </div> -->
+
+  </mat-form-field>
+
+  <br>TODO: remove this: {{spy.className}}
+  <mat-form-field>
+    <input matInput placeholder="Email Address" [(ngModel)]="model.email" name="email" id="email" required>
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Email Address" required>
+    <input matInput placeholder="Company" [(ngModel)]="model.company" name="company" id="company" required>
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Company" required>
+    <textarea matInput placeholder="Message" [(ngModel)]="model.message" name="message" id="message" required></textarea>
   </mat-form-field>
 
   <mat-form-field>
-    <textarea matInput placeholder="Message" required></textarea>
+    <input matInput placeholder="Your Favorite Color :)" [(ngModel)]="model.favoriteColor" name="favoriteColor" id="favoriteColor">
   </mat-form-field>
 
-  <mat-form-field>
-    <input matInput placeholder="Your Favorite Color :)">
-  </mat-form-field>
-
-  <button mat-button (click)="submitContactForm()" >Basic</button>
+  <button mat-button type="submit" >Send</button>
 
 </form>

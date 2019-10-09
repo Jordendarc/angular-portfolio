@@ -16,9 +16,7 @@ import { MainAboutMeComponent } from './components/about-me/main-about-me/main-a
 import { ContactComponent } from './components/contact/contact/contact.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-
-
-
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +38,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatDividerModule,
     MatToolbarModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
