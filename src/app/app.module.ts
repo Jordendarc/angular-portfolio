@@ -17,6 +17,7 @@ import { ContactComponent } from './components/contact/contact/contact.component
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FormsModule }   from '@angular/forms';
     MatToolbarModule,
     MatInputModule,
     MatButtonModule,
+    ReactiveFormsModule,
     FormsModule
   ],
   providers: [],

@@ -1,31 +1,26 @@
 
-<form id="contact-form" (ngSubmit)="submitContactForm()"  #sendForm="ngForm">
+<form id="contact-form" [formGroup]="sendMessageForm" (ngSubmit)="submitContactForm()" >
   {{ diagnostic }}
   <mat-form-field>
-    <input matInput placeholder="Your Name" [(ngModel)]="model.name" name="name" id="name" required #spy>
-    <!-- <div [hidden]="name.valid || name.pristine"
-       class="alert alert-danger">Name is required
-    </div> -->
-
-  </mat-form-field>
-
-  <br>TODO: remove this: {{spy.className}}
-  <mat-form-field>
-    <input matInput placeholder="Email Address" [(ngModel)]="model.email" name="email" id="email" required>
+    <input matInput placeholder="Your Name" formControlName="name" >
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Company" [(ngModel)]="model.company" name="company" id="company" required>
+    <input matInput placeholder="Email Address" formControlName="email"  >
   </mat-form-field>
 
   <mat-form-field>
-    <textarea matInput placeholder="Message" [(ngModel)]="model.message" name="message" id="message" required></textarea>
+    <input matInput placeholder="Company" formControlName="company"  >
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Your Favorite Color :)" [(ngModel)]="model.favoriteColor" name="favoriteColor" id="favoriteColor">
+    <textarea matInput placeholder="Message" formControlName="message"  ></textarea>
   </mat-form-field>
 
-  <button mat-button type="submit" >Send</button>
+  <mat-form-field>
+    <input matInput placeholder="Your Favorite Color :)" formControlName="favoriteColor" >
+  </mat-form-field>
+
+  <button mat-button [disabled]="!sendMessageForm.valid" type="submit" >Send</button>
 
 </form>

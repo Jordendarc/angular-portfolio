@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl,FormBuilder, Validators } from '@angular/forms';
 
 
 @Component({
@@ -9,32 +9,24 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  model = new SendMessage();
+  sendMessageForm = this.formBuilder.group({
+    name: ['', Validators.required],
+    email: ['', Validators.required],
+    company: ['', Validators.required],
+    message: ['', Validators.required],
+    favoriteColor: ['']
+  }, { validators: identityRevealedValidator });
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit() {
-    this.model.valid = false;
-    this.sendForm = {
-    'sendControl': new FormControl(this.model.name, [
-      Validators.required,
-      Validators.minLength(4)
-    ])
-  };
-  }
-
-  get diagnostic() { return JSON.stringify(this.model); }
-
-  isValidMessage():boolean{
-
-    return true;
-  }
+  ngOnInit() {}
 
   submitContactForm(){
-    if(this.isValidMessage()){
-
-    }
   }
+
+  identityRevealedValidator(nameRe: RegExp): ValidatorFn {
+  return null;
+}
 
 }
 
