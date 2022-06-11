@@ -16,6 +16,7 @@ import { environment } from '../environments/environment';
 import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireAnalyticsModule} from '@angular/fire/compat/analytics';
 
 
 
@@ -37,6 +38,7 @@ import {AngularFireModule} from '@angular/fire/compat';
     MatDividerModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
+    AngularFireAnalyticsModule
   ],
   providers: [
     ScreenTrackingService,UserTrackingService
