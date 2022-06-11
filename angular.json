@@ -115,6 +115,16 @@
               "devServerTarget": "portfolio:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "portfolio:build:production",
+            "firebaseProject": "angular-portfolio-130f4",
+            "firebaseHostingSite": "angular-portfolio-130f4"
+          }
         }
       }
     }
