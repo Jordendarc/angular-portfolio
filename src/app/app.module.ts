@@ -10,13 +10,14 @@ import { WorkComponent } from './components/work/work/work.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
-import { MatDividerModule } from '@angular/material';
+import {MatButtonModule, MatCardModule, MatDividerModule, MatProgressSpinnerModule} from '@angular/material';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import {AngularFireModule} from '@angular/fire/compat';
 import {AngularFireAnalyticsModule} from '@angular/fire/compat/analytics';
+import { WorkDescriptionComponent } from './components/work/work/work-description/work-description.component';
 
 
 
@@ -25,23 +26,28 @@ import {AngularFireAnalyticsModule} from '@angular/fire/compat/analytics';
     AppComponent,
     HeaderComponent,
     AboutMeComponent,
-    WorkComponent
+    WorkComponent,
+    WorkDescriptionComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatSliderModule,
-    MatExpansionModule,
-    MatListModule,
-    MatDividerModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    AngularFireAnalyticsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatSliderModule,
+        MatExpansionModule,
+        MatListModule,
+        MatDividerModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        AngularFireAnalyticsModule,
+        MatCardModule,
+        MatButtonModule,
+        MatProgressSpinnerModule
+    ],
   providers: [
-    ScreenTrackingService,UserTrackingService
+    ScreenTrackingService,
+    UserTrackingService
   ],
   bootstrap: [AppComponent]
 })
