@@ -17,7 +17,6 @@ export class WorkComponent implements OnInit {
 
   ngOnInit() {
     this.afs.collection('work').valueChanges({ idField: 'id' }).subscribe((items: any[]) => {
-      console.log('item', items)
       if(items) {
         this.work = items.sort((a, b) => {
           return new Date(a.from) > new Date(b.from) ? -1 : 1

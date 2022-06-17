@@ -25,5 +25,14 @@ mat-expansion-panel
     margin-left: 20%
     margin-right: 20%
 
-mat-divider
-    border-color: $nice-teal-color
+.card-50
+  @media screen and (max-width: 500px)
+    width: 100%
+  @media screen and (min-width: 501px)
+    width: 49%
+.section
+  @media screen and (max-width: 500px)
+    display: block
+  @media screen and (min-width: 501px)
+    display: flex
+    justify-content: space-between

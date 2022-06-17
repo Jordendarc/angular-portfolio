@@ -9,11 +9,9 @@ export class AppComponent {
   title = 'portfolio';
 
     enterHover(event){
-      console.log(event);
    }
 
    exitHover(event){
-     console.log(event);
    }
 
 }
