@@ -1,14 +1,14 @@
+<mat-card>
+  <mat-card-title>Keywords:</mat-card-title>
+  <mat-chip-list aria-label="keywords">
+    <mat-chip>Java</mat-chip><mat-chip>Angular</mat-chip><mat-chip>Javascript</mat-chip><mat-chip>PCF</mat-chip>
+    <mat-chip>Firebase</mat-chip><mat-chip>Typescript</mat-chip><mat-chip>CI/CD</mat-chip><mat-chip>Kotlin</mat-chip>
+    <mat-chip>Firestore</mat-chip><mat-chip>AWS</mat-chip><mat-chip>PWA</mat-chip><mat-chip>Spring Boot</mat-chip>
+    <mat-chip>Rest API</mat-chip><mat-chip>DB2</mat-chip><mat-chip>SQL</mat-chip><mat-chip>NoSQL</mat-chip>
+    <mat-chip>Git</mat-chip>
+  </mat-chip-list>
+</mat-card>
 <div *ngIf="work; else loadingSpinner">
-  <mat-card>
-    <mat-card-title>Keywords:</mat-card-title>
-    <mat-chip-list aria-label="keywords">
-      <mat-chip>Java</mat-chip><mat-chip>Angular</mat-chip><mat-chip>Javascript</mat-chip><mat-chip>PCF</mat-chip>
-      <mat-chip>Firebase</mat-chip><mat-chip>Typescript</mat-chip><mat-chip>CI/CD</mat-chip><mat-chip>Kotlin</mat-chip>
-      <mat-chip>Firestore</mat-chip><mat-chip>AWS</mat-chip><mat-chip>PWA</mat-chip><mat-chip>Spring Boot</mat-chip>
-      <mat-chip>Rest API</mat-chip><mat-chip>DB2</mat-chip><mat-chip>SQL</mat-chip><mat-chip>NoSQL</mat-chip>
-      <mat-chip>Git</mat-chip>
-    </mat-chip-list>
-  </mat-card>
   <div *ngIf="loaded">
     <div *ngFor="let workItem of work; index as i;">
       <mat-card>

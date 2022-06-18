@@ -16,12 +16,10 @@ export class WorkComponent implements OnInit {
               private datePipe: DatePipe) { }
 
   ngOnInit() {
-    this.afs.collection('work').valueChanges({ idField: 'id' }).subscribe((items: any[]) => {
+    this.afs.collection('work', ref => ref.orderBy('from', 'desc')).valueChanges({ idField: 'id' }).subscribe((items: any[]) => {
       this.loaded = false
       if(items) {
-        this.work = items.sort((a, b) => {
-          return new Date(a.from) > new Date(b.from) ? -1 : 1
-        })
+        this.work = items
         this.loaded = true
       }
     })
