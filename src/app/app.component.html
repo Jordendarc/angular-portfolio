@@ -1,15 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
+<div>
   <app-header></app-header>
-  <br><br>
-  <div class="button-list mb-3" >
-    <button mat-raised-button (mouseenter)="enterHover($event)" (mouseleave)="exitHover($event)" routerLink="/aboutMe" class="link-button mr-1" id="about-me-button">
-      About Me
-    </button>
-    <button mat-raised-button (mouseenter)="enterHover($event)" (mouseleave)="exitHover($event)" routerLink="/work" class="link-button ml-1" id="work-button">
-      Work
-    </button>
+  <div class="container">
+    <div class="button-list mb-3" >
+      <button mat-raised-button (mouseenter)="enterHover($event)" (mouseleave)="exitHover($event)" routerLink="/aboutMe" class="link-button mr-1" id="about-me-button">
+        About Me
+      </button>
+      <button mat-raised-button (mouseenter)="enterHover($event)" (mouseleave)="exitHover($event)" routerLink="/work" class="link-button ml-1" id="work-button">
+        Work
+      </button>
+    </div>
+    <!-- <app-about-me></app-about-me> -->
+    <router-outlet></router-outlet>
   </div>
-  <!-- <app-about-me></app-about-me> -->
-<router-outlet></router-outlet>
+
 </div>
