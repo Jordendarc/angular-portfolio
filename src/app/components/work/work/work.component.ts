@@ -10,17 +10,19 @@ import {DatePipe} from '@angular/common';
   providers: [DatePipe]
 })
 export class WorkComponent implements OnInit {
-
+  loaded  = false
   work = null
   constructor(private afs: AngularFirestore,
               private datePipe: DatePipe) { }
 
   ngOnInit() {
     this.afs.collection('work').valueChanges({ idField: 'id' }).subscribe((items: any[]) => {
+      this.loaded = false
       if(items) {
         this.work = items.sort((a, b) => {
           return new Date(a.from) > new Date(b.from) ? -1 : 1
         })
+        this.loaded = true
       }
     })
   }

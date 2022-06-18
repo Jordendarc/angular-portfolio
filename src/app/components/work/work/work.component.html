@@ -1,4 +1,4 @@
-<div *ngIf="work; else loading">
+<div *ngIf="work; else loadingSpinner">
   <mat-card>
     <mat-card-title>Keywords:</mat-card-title>
     <mat-chip-list aria-label="keywords">
@@ -9,22 +9,25 @@
       <mat-chip>Git</mat-chip>
     </mat-chip-list>
   </mat-card>
-  <div *ngFor="let workItem of work; index as i;">
-    <mat-card>
-      <mat-card-title>
-        <div>{{workItem.workplace}}</div>
-        <div style="font-size: medium">
-          {{workItem.from | date:'MMMM y' }} to {{determineTo(workItem.to)}}
-        </div>
-      </mat-card-title>
-      <mat-card-subtitle>{{workItem.position}}</mat-card-subtitle>
-      <mat-card-content>
-        <app-work-description [id]="workItem.id"></app-work-description>
-      </mat-card-content>
-    </mat-card>
+  <div *ngIf="loaded">
+    <div *ngFor="let workItem of work; index as i;">
+      <mat-card>
+        <mat-card-title>
+          <div>{{workItem.workplace}}</div>
+          <div style="font-size: medium">
+            {{workItem.from | date:'MMMM y' }} to {{determineTo(workItem.to)}}
+          </div>
+        </mat-card-title>
+        <mat-card-subtitle>{{workItem.position}}</mat-card-subtitle>
+        <mat-card-content>
+          <app-work-description [id]="workItem.id"></app-work-description>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
+
 </div>
-<ng-template #loading>
+<ng-template #loadingSpinner>
   <div class="spinner">
     <mat-spinner></mat-spinner>
   </div>

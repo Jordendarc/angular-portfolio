@@ -1,4 +1,4 @@
-<div *ngIf="id && descriptions">
+<div *ngIf="id && descriptions; else loading">
   <ul>
     <div *ngFor="let description of descriptions;">
       <li>{{description.text}} </li>
@@ -6,3 +6,8 @@
   </ul>
 
 </div>
+<ng-template #loading>
+  <div class="spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
