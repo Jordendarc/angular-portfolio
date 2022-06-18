@@ -24,10 +24,14 @@ h1
 h4
   display: flex
   justify-content: end
-  letter-spacing: 5px
   font-family: 'Hind Madurai', sans-serif
   color: whitesmoke
   text-shadow: 3px 3px 5px $shadow-color
+  @media screen and (min-width: 925px)
+    letter-spacing: 5px
+  @media screen and (min-width: 800px) and (max-width: 925px)
+    font-size: 16px
+    letter-spacing: 2px
 
 .row
   @media screen and (max-width: 925px)
