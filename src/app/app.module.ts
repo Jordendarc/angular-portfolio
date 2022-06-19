@@ -23,7 +23,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatChipsModule} from '@angular/material/chips';
-
+import {MatIconModule} from '@angular/material/icon';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome'
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,29 +33,31 @@ import {MatChipsModule} from '@angular/material/chips';
     WorkComponent,
     WorkDescriptionComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatSliderModule,
-    MatExpansionModule,
-    MatListModule,
-    MatDividerModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAnalyticsModule,
-    AngularFirestoreModule,
-    MatCardModule,
-    MatButtonModule,
-    MatProgressSpinnerModule,
-    MatCardModule,
-    MatProgressSpinnerModule,
-    MatProgressSpinnerModule,
-    MatCardModule,
-    NgbModule,
-    MatTabsModule,
-    MatChipsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatSliderModule,
+        MatExpansionModule,
+        MatListModule,
+        MatDividerModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireAnalyticsModule,
+        AngularFirestoreModule,
+        MatCardModule,
+        MatButtonModule,
+        MatProgressSpinnerModule,
+        MatCardModule,
+        MatProgressSpinnerModule,
+        MatProgressSpinnerModule,
+        MatCardModule,
+        NgbModule,
+        MatTabsModule,
+        MatChipsModule,
+        MatIconModule,
+        FontAwesomeModule
+    ],
   providers: [
     ScreenTrackingService,
     UserTrackingService
