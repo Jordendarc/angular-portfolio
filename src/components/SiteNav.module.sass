@@ -1,0 +1,60 @@
+.nav
+  position: sticky
+  top: 0
+  z-index: 10
+  border-bottom: 1px solid var(--border)
+  background-color: color-mix(in srgb, var(--bg) 82%, transparent)
+  backdrop-filter: saturate(160%) blur(12px)
+
+.inner
+  display: flex
+  align-items: center
+  gap: 24px
+  max-width: 960px
+  height: var(--nav-height)
+  margin: 0 auto
+  padding: 0 24px
+  ul
+    display: flex
+    align-items: center
+    margin: 0
+    padding: 0
+    list-style: none
+  a
+    text-decoration: none
+
+.brand
+  margin-right: auto
+  font-weight: 600
+  letter-spacing: -0.01em
+  white-space: nowrap
+
+.sections
+  gap: 20px
+  font-size: 0.9375rem
+  color: var(--muted)
+  a:hover
+    color: var(--text)
+  // on narrow screens the page is short enough to scroll; keep the bar to name + language
+  @media (max-width: 720px)
+    display: none !important
+
+.locales
+  gap: 2px
+  padding: 3px !important
+  border: 1px solid var(--border)
+  border-radius: 999px
+  font-size: 0.8125rem
+  font-weight: 500
+  a
+    display: block
+    padding: 4px 10px
+    border-radius: 999px
+    line-height: 1.4
+    color: var(--muted)
+    white-space: nowrap
+    &:hover
+      color: var(--text)
+    &[aria-current]
+      background-color: var(--accent)
+      color: var(--accent-contrast)

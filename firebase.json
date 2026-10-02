@@ -19,9 +19,14 @@
     ],
     "redirects": [
       {
-        "source": "/",
-        "destination": "/aboutMe",
-        "type": 302
+        "source": "/aboutMe",
+        "destination": "/en",
+        "type": 301
+      },
+      {
+        "source": "/work",
+        "destination": "/en#experience",
+        "type": 301
       }
     ]
   }

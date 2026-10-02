@@ -1,0 +1,284 @@
+$narrow: 720px
+
+.container
+  max-width: 960px
+  margin: 0 auto
+  padding: 0 24px
+
+// ---------- hero ----------
+
+.hero
+  display: flex
+  gap: 32px
+  align-items: flex-start
+  padding: 72px 0 64px
+  @media (max-width: $narrow)
+    flex-direction: column
+    gap: 20px
+    padding: 40px 0 44px
+
+.avatar
+  flex-shrink: 0
+  width: 112px
+  height: 112px
+  border-radius: 50%
+  object-fit: cover
+  border: 1px solid var(--border)
+  @media (max-width: $narrow)
+    width: 88px
+    height: 88px
+
+.name
+  font-size: clamp(2rem, 6vw, 3.25rem)
+  font-weight: 700
+  line-height: 1.1
+  letter-spacing: -0.025em
+
+.nameReading
+  margin-top: 6px
+  font-size: 0.9375rem
+  letter-spacing: 0.04em
+  color: var(--muted)
+
+.title
+  margin-top: 10px
+  font-size: 1.125rem
+  font-weight: 600
+  color: var(--accent)
+
+.location
+  font-weight: 400
+  color: var(--muted)
+  white-space: nowrap
+  &::before
+    content: "·"
+    margin: 0 0.5em
+  // on its own line when there is no room beside the title
+  @media (max-width: $narrow)
+    display: block
+    font-size: 1rem
+    &::before
+      content: none
+
+.tagline
+  max-width: 60ch
+  margin-top: 16px
+  font-size: 1.125rem
+  color: var(--muted)
+
+.actions
+  display: flex
+  flex-wrap: wrap
+  gap: 10px
+  margin-top: 24px
+
+.button
+  display: inline-flex
+  align-items: center
+  gap: 8px
+  min-height: 40px
+  padding: 0 16px
+  border: 1px solid var(--border)
+  border-radius: 999px
+  background-color: var(--surface)
+  font-size: 0.9375rem
+  font-weight: 500
+  line-height: 1
+  text-decoration: none
+  transition: border-color 120ms ease, background-color 120ms ease
+  &:hover
+    border-color: var(--accent)
+
+.primary
+  border-color: var(--accent)
+  background-color: var(--accent)
+  color: var(--accent-contrast)
+  &:hover
+    filter: brightness(1.08)
+
+// ---------- sections ----------
+
+.section
+  display: grid
+  grid-template-columns: 180px minmax(0, 1fr)
+  gap: 32px
+  padding: 48px 0
+  border-top: 1px solid var(--border)
+  @media (max-width: $narrow)
+    grid-template-columns: minmax(0, 1fr)
+    gap: 16px
+    padding: 36px 0
+
+.sectionHeading
+  align-self: start
+  position: sticky
+  top: calc(var(--nav-height) + 24px)
+  font-size: 0.8125rem
+  font-weight: 600
+  line-height: 1.65
+  letter-spacing: 0.08em
+  text-transform: uppercase
+  color: var(--muted)
+  @media (max-width: $narrow)
+    position: static
+
+.prose
+  display: grid
+  gap: 16px
+  max-width: 68ch
+  font-size: 1.0625rem
+
+// ---------- shared item bits ----------
+
+.itemHeader
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: baseline
+  column-gap: 16px
+
+.itemName
+  font-size: 1.0625rem
+  font-weight: 600
+  line-height: 1.4
+
+.date
+  font-size: 0.875rem
+  color: var(--muted)
+  font-variant-numeric: tabular-nums
+  white-space: nowrap
+
+.roleTitle
+  margin-top: 2px
+  font-size: 0.9375rem
+  color: var(--muted)
+
+.note
+  margin-top: 2px
+  font-size: 0.875rem
+  color: var(--muted)
+
+.companyLink
+  text-decoration: none
+  &:hover
+    color: var(--accent)
+
+.badge
+  padding: 1px 8px
+  border: 1px solid var(--border)
+  border-radius: 999px
+  font-size: 0.75rem
+  font-weight: 500
+  color: var(--muted)
+  white-space: nowrap
+
+// ---------- experience ----------
+
+.roles
+  display: grid
+  gap: 36px
+  margin: 0
+  padding: 0
+  list-style: none
+
+.highlights
+  display: grid
+  gap: 6px
+  margin-top: 12px
+  padding-left: 1.15em
+  list-style: disc
+  font-size: 0.9375rem
+  li::marker
+    color: var(--muted)
+
+// ---------- projects ----------
+
+.projects
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
+  gap: 16px
+  margin: 0
+  padding: 0
+  list-style: none
+
+.project
+  display: flex
+  flex-direction: column
+  padding: 20px
+  border: 1px solid var(--border)
+  border-radius: 14px
+  background-color: var(--surface)
+
+.projectDescription
+  margin-top: 8px
+  font-size: 0.9375rem
+  color: var(--muted)
+
+.tags
+  display: flex
+  flex-wrap: wrap
+  gap: 6px
+  margin: 16px 0
+  padding: 0
+  list-style: none
+  li
+    padding: 2px 10px
+    border-radius: 999px
+    background-color: var(--accent-soft)
+    font-size: 0.8125rem
+    font-weight: 500
+    line-height: 1.6
+    color: var(--accent)
+
+.projectLinks
+  display: flex
+  flex-wrap: wrap
+  gap: 16px
+  margin-top: auto
+  font-size: 0.875rem
+  font-weight: 500
+  a
+    color: var(--accent)
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+// ---------- skills ----------
+
+.skills
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+  gap: 20px 32px
+  dt
+    font-weight: 600
+  dd
+    margin-top: 2px
+    font-size: 0.9375rem
+    color: var(--muted)
+
+// ---------- certifications, education ----------
+
+.rows
+  display: grid
+  gap: 14px
+  margin: 0
+  padding: 0
+  list-style: none
+
+// ---------- contact, footer ----------
+
+.contactBody
+  max-width: 60ch
+  font-size: 1.0625rem
+
+.contactNote
+  max-width: 60ch
+  margin-top: 8px
+  font-size: 0.9375rem
+  color: var(--muted)
+
+.footer
+  padding: 28px 0 40px
+  border-top: 1px solid var(--border)
+  font-size: 0.875rem
+  color: var(--muted)
