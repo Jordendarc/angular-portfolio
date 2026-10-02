@@ -1,6 +1,6 @@
 Portfolio site written using Next.js
 
-https://jordencarterwhitbey.website
+https://jorden-cw.com
 
 ## Development
 

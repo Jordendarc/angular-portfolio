@@ -1,5 +1,4 @@
 import { getApp, getApps, initializeApp } from 'firebase/app'
-import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
   projectId: 'angular-portfolio-130f4',
@@ -12,5 +11,5 @@ const firebaseConfig = {
   measurementId: 'G-YWH6X204C4',
 }
 
+// Only used for analytics now; the page content lives in src/data/resume.ts
 export const app = getApps().length ? getApp() : initializeApp(firebaseConfig)
-export const db = getFirestore(app)
